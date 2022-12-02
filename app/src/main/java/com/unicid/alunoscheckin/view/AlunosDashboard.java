@@ -40,7 +40,7 @@ public class AlunosDashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alunos_dashboard);
-        getSupportActionBar().hide();
+
         findElementsById();
         navigatorTextViews();
 
@@ -68,7 +68,6 @@ public class AlunosDashboard extends AppCompatActivity {
             public void onClick(View view) {
                 intent = new Intent(AlunosDashboard.this, ScanActivity.class);
                 Bundle extras = getIntent().getExtras();
-                String aluno = extras.getString("aluno");
                 if (extras != null) {
                     qntPresenca = extras.getInt("presenca",0);
                     qntPresenca2 = extras.getInt("presenca2",0);
@@ -89,9 +88,6 @@ public class AlunosDashboard extends AppCompatActivity {
                 intent.putExtra("presenca6", qntPresenca6);
                 intent.putExtra("presenca7", qntPresenca7);
                 intent.putExtra("presenca8", qntPresenca8);
-                String aux = "das";
-                intent.putExtra("aux", aux);
-                intent.putExtra("aluno", aluno);
                 startActivity(intent);
                 finish();
             }
@@ -102,7 +98,6 @@ public class AlunosDashboard extends AppCompatActivity {
             public void onClick(View view) {
                 intent = new Intent(AlunosDashboard.this, ScanActivity.class);
                 Bundle extras = getIntent().getExtras();
-                String aluno = extras.getString("aluno");
                 if (extras != null) {
                     qntPresenca = extras.getInt("presenca",0);
                     qntPresenca2 = extras.getInt("presenca2",0);
@@ -123,9 +118,6 @@ public class AlunosDashboard extends AppCompatActivity {
                 intent.putExtra("presenca6", qntPresenca6);
                 intent.putExtra("presenca7", qntPresenca7);
                 intent.putExtra("presenca8", qntPresenca8);
-                String aux = "das";
-                intent.putExtra("aux", aux);
-                intent.putExtra("aluno", aluno);
                 startActivity(intent);
                 finish();
             }
@@ -136,7 +128,6 @@ public class AlunosDashboard extends AppCompatActivity {
             public void onClick(View view) {
                 intent = new Intent(AlunosDashboard.this, ScanActivity.class);
                 Bundle extras = getIntent().getExtras();
-                String aluno = extras.getString("aluno");
                 if (extras != null) {
                     qntPresenca = extras.getInt("presenca",0);
                     qntPresenca2 = extras.getInt("presenca2",0);
@@ -157,9 +148,6 @@ public class AlunosDashboard extends AppCompatActivity {
                 intent.putExtra("presenca6", qntPresenca6);
                 intent.putExtra("presenca7", qntPresenca7);
                 intent.putExtra("presenca8", qntPresenca8);
-                String aux = "das";
-                intent.putExtra("aux", aux);
-                intent.putExtra("aluno", aluno);
                 startActivity(intent);
                 finish();
             }
@@ -170,7 +158,6 @@ public class AlunosDashboard extends AppCompatActivity {
             public void onClick(View view) {
                 intent = new Intent(AlunosDashboard.this, ScanActivity.class);
                 Bundle extras = getIntent().getExtras();
-                String aluno = extras.getString("aluno");
                 if (extras != null) {
                     qntPresenca = extras.getInt("presenca",0);
                     qntPresenca2 = extras.getInt("presenca2",0);
@@ -191,9 +178,6 @@ public class AlunosDashboard extends AppCompatActivity {
                 intent.putExtra("presenca6", qntPresenca6);
                 intent.putExtra("presenca7", qntPresenca7);
                 intent.putExtra("presenca8", qntPresenca8);
-                String aux = "das";
-                intent.putExtra("aux", aux);
-                intent.putExtra("aluno", aluno);
                 startActivity(intent);
                 finish();
             }
@@ -204,7 +188,6 @@ public class AlunosDashboard extends AppCompatActivity {
             public void onClick(View view) {
                 intent = new Intent(AlunosDashboard.this, ScanActivity.class);
                 Bundle extras = getIntent().getExtras();
-                String aluno = extras.getString("aluno");
                 if (extras != null) {
                     qntPresenca = extras.getInt("presenca",0);
                     qntPresenca2 = extras.getInt("presenca2",0);
@@ -225,9 +208,6 @@ public class AlunosDashboard extends AppCompatActivity {
                 intent.putExtra("presenca6", qntPresenca6);
                 intent.putExtra("presenca7", qntPresenca7);
                 intent.putExtra("presenca8", qntPresenca8);
-                String aux = "das";
-                intent.putExtra("aux", aux);
-                intent.putExtra("aluno", aluno);
                 startActivity(intent);
                 finish();
             }
@@ -238,7 +218,6 @@ public class AlunosDashboard extends AppCompatActivity {
             public void onClick(View view) {
                 intent = new Intent(AlunosDashboard.this, ScanActivity.class);
                 Bundle extras = getIntent().getExtras();
-                String aluno = extras.getString("aluno");
                 if (extras != null) {
                     qntPresenca = extras.getInt("presenca",0);
                     qntPresenca2 = extras.getInt("presenca2",0);
@@ -259,9 +238,6 @@ public class AlunosDashboard extends AppCompatActivity {
                 intent.putExtra("presenca6", qntPresenca6);
                 intent.putExtra("presenca7", qntPresenca7);
                 intent.putExtra("presenca8", qntPresenca8);
-                String aux = "das";
-                intent.putExtra("aux", aux);
-                intent.putExtra("aluno", aluno);
                 startActivity(intent);
                 finish();
             }
@@ -272,7 +248,6 @@ public class AlunosDashboard extends AppCompatActivity {
             public void onClick(View view) {
                 intent = new Intent(AlunosDashboard.this, ScanActivity.class);
                 Bundle extras = getIntent().getExtras();
-                String aluno = extras.getString("aluno");
                 if (extras != null) {
                     qntPresenca = extras.getInt("presenca",0);
                     qntPresenca2 = extras.getInt("presenca2",0);
@@ -293,9 +268,6 @@ public class AlunosDashboard extends AppCompatActivity {
                 intent.putExtra("presenca6", qntPresenca6);
                 intent.putExtra("presenca7", qntPresenca7);
                 intent.putExtra("presenca8", qntPresenca8);
-                String aux = "das";
-                intent.putExtra("aux", aux);
-                intent.putExtra("aluno", aluno);
                 startActivity(intent);
                 finish();
             }
@@ -306,7 +278,6 @@ public class AlunosDashboard extends AppCompatActivity {
             public void onClick(View view) {
                 intent = new Intent(AlunosDashboard.this, ScanActivity.class);
                 Bundle extras = getIntent().getExtras();
-                String aluno = extras.getString("aluno");
                 if (extras != null) {
                     qntPresenca = extras.getInt("presenca",0);
                     qntPresenca2 = extras.getInt("presenca2",0);
@@ -327,9 +298,6 @@ public class AlunosDashboard extends AppCompatActivity {
                 intent.putExtra("presenca6", qntPresenca6);
                 intent.putExtra("presenca7", qntPresenca7);
                 intent.putExtra("presenca8", qntPresenca8);
-                String aux = "das";
-                intent.putExtra("aux", aux);
-                intent.putExtra("aluno", aluno);
                 startActivity(intent);
                 finish();
             }
@@ -340,7 +308,6 @@ public class AlunosDashboard extends AppCompatActivity {
             public void onClick(View view) {
                 intent = new Intent(AlunosDashboard.this, ScanActivity.class);
                 Bundle extras = getIntent().getExtras();
-                String aluno = extras.getString("aluno");
                 if (extras != null) {
                     qntPresenca = extras.getInt("presenca",0);
                     qntPresenca2 = extras.getInt("presenca2",0);
@@ -361,9 +328,7 @@ public class AlunosDashboard extends AppCompatActivity {
                 intent.putExtra("presenca6", qntPresenca6);
                 intent.putExtra("presenca7", qntPresenca7);
                 intent.putExtra("presenca8", qntPresenca8);
-                String aux = "aux";
-                intent.putExtra("aux", aux);
-                intent.putExtra("aluno", aluno);
+
                 startActivity(intent);
                 finish();
             }
