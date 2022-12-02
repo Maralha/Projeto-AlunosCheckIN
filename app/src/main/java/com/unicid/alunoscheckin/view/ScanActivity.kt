@@ -7,14 +7,19 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.zxing.integration.android.IntentIntegrator
 import com.unicid.alunoscheckin.R
+import com.unicid.alunoscheckin.datasource.AppDataBase
 
 class ScanActivity : AppCompatActivity() {
 
     lateinit var spinner: Spinner
     lateinit var adapter: ArrayAdapter<String>
+    lateinit var textNomeUsuario: TextView
+    lateinit var btnFechar: Button
+
 
 
     var i: Int? = null
@@ -67,6 +72,9 @@ class ScanActivity : AppCompatActivity() {
         var textNomeUsuario: TextView = findViewById(R.id.textNomeUsuario)
         textNomeUsuario.setText(aluno);
 
+        textNomeUsuario = findViewById(R.id.textNomeUsuario)
+
+        
 
 
 
@@ -150,10 +158,28 @@ class ScanActivity : AppCompatActivity() {
             finish()
         }
 
+        btnFechar = findViewById(R.id.btnFechar)
+        fecharApp()
 
     }
 
     fun find(num: Int?){
 
+    }
+
+    fun fecharApp(){
+        btnFechar.setOnClickListener {
+            val alertDialog = AlertDialog.Builder(this).setTitle("Fechar a Aplicação").setMessage("Você deseja encerrar o aplicativo?")
+
+            alertDialog.setPositiveButton("Sim") { dialog, which ->
+                finish()
+            }
+
+            alertDialog.setNegativeButton("Não"){ dialog, which ->
+
+            }
+
+                .show()
+        }
     }
 }

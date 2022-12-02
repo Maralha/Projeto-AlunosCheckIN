@@ -45,6 +45,7 @@ public class AlunosDashboard extends AppCompatActivity {
         navigatorTextViews();
 
 
+
     }
 
     protected void findElementsById(){
@@ -56,7 +57,6 @@ public class AlunosDashboard extends AppCompatActivity {
         Bd = findViewById(R.id.txtBd);
         Aps1 = findViewById(R.id.txtAps1);
         Aps2 = findViewById(R.id.txtAps2);
-        btnNext = findViewById(R.id.btnNext);
 
     }
 
@@ -70,7 +70,7 @@ public class AlunosDashboard extends AppCompatActivity {
                 Bundle extras = getIntent().getExtras();
                 String aluno = extras.getString("aluno");
                 if (extras != null) {
-                     qntPresenca = extras.getInt("presenca",0);
+                    qntPresenca = extras.getInt("presenca",0);
                     qntPresenca2 = extras.getInt("presenca2",0);
                     qntPresenca3 = extras.getInt("presenca3",0);
                     qntPresenca4 = extras.getInt("presenca4",0);
@@ -368,6 +368,7 @@ public class AlunosDashboard extends AppCompatActivity {
                 finish();
             }
         });
+
 
     }
 
