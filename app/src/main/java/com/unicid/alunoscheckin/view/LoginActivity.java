@@ -125,11 +125,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                     if(validar){
                         Toast.makeText(LoginActivity.this,  "Seja bem Vindo: "+AppDataBase.boasVindasUsuario(rgm), Toast.LENGTH_SHORT).show();
-
+                        String aluno = AppDataBase.boasVindasUsuario(rgm);
                         editRgm.setTextColor(Color.GREEN);
                         editSenha.setTextColor(Color.GREEN);
 
                         intent = new Intent(LoginActivity.this, AlunosDashboard.class);
+                        intent.putExtra("aluno", aluno);
                         startActivity(intent);
                         finish();
                     } else {

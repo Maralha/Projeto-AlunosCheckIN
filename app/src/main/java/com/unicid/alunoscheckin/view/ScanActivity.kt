@@ -34,11 +34,14 @@ class ScanActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan)
-
-        val integrator: IntentIntegrator = IntentIntegrator(this)
-        integrator.setPrompt("Leitura de QRCode")
-        obterResultado.launch(integrator.createScanIntent())
         var it = intent
+        supportActionBar!!.hide()
+        var aux = it.getStringExtra("aux")
+        if (aux != "aux") {
+            val integrator: IntentIntegrator = IntentIntegrator(this)
+            integrator.setPrompt("Leitura de QRCode")
+            obterResultado.launch(integrator.createScanIntent())
+        }
 
 
         var num = it.getIntExtra("presenca", 0)
@@ -49,6 +52,7 @@ class ScanActivity : AppCompatActivity() {
         var num6 = it.getIntExtra("presenca6", 0)
         var num7 = it.getIntExtra("presenca7", 0)
         var num8 = it.getIntExtra("presenca8", 0)
+        var aluno = it.getStringExtra("aluno")
         var iti = Intent(this@ScanActivity, AlunosDashboard::class.java)
         iti.putExtra("presenca",num)
         iti.putExtra("presenca2",num2)
@@ -58,8 +62,10 @@ class ScanActivity : AppCompatActivity() {
         iti.putExtra("presenca6",num6)
         iti.putExtra("presenca7",num7)
         iti.putExtra("presenca8",num8)
+        iti.putExtra("aluno",aluno)
 
-
+        var textNomeUsuario: TextView = findViewById(R.id.textNomeUsuario)
+        textNomeUsuario.setText(aluno);
 
 
 
@@ -132,7 +138,6 @@ class ScanActivity : AppCompatActivity() {
 
         val btnsair: Button = findViewById(R.id.btnFechar)
         btnsair.setOnClickListener{
-            startActivity(iti)
             finish()
         }
 
